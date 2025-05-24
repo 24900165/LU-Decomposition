@@ -38,6 +38,51 @@ print(U)
 ## Output:
 ![alt text](<Screenshot 2025-05-11 182148.png>)
 
+### Algorithm
+## Step 1:
+Import the required modules:
+
+Use from scipy.linalg import lu to import the LU decomposition function from the SciPy library.
+
+Use import numpy as np to import the NumPy library for numerical operations.
+
+### Step 2:
+Define the input matrix (it must be a square matrix) using np.array().
+
+### Step 3:
+Call the lu() function by passing the defined matrix as an argument.
+This function will return three matrices:
+
+P: Permutation matrix
+
+L: Lower triangular matrix
+
+U: Upper triangular matrix
+
+### Step 4:
+Store the output of the lu() function into three variables: P, L, and U.
+
+### Step 5:
+Display the matrices P, L, and U using the print() function.
+
+### Step 6:
+End the program.
+
+### Program:
+```
+import numpy as np
+from scipy.linalg import lu_factor,lu_solve
+A=np.array(eval(input()))
+B=np.array(eval(input()))
+piv,lu=lu_factor(A)
+result=lu_solve((piv,lu),B)
+print(result)
+```
+
+### Output:
+![alt text](<Screenshot 2025-05-24 110008.png>)
+
+
 
 ## Result:
 Thus the program to find the LU Decomposition of a matrix is written and verified using python programming.
