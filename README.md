@@ -39,33 +39,37 @@ print(U)
 ![alt text](<Screenshot 2025-05-11 182148.png>)
 
 ### Algorithm
-## Step 1:
+### Step 1:
 Import the required modules:
 
-Use from scipy.linalg import lu to import the LU decomposition function from the SciPy library.
+Use import numpy as np to work with arrays.
 
-Use import numpy as np to import the NumPy library for numerical operations.
+Use from scipy.linalg import lu_factor, lu_solve to access LU decomposition and solution functions.
 
 ### Step 2:
-Define the input matrix (it must be a square matrix) using np.array().
+Take input for the coefficient matrix A using eval(input()) and convert it into a NumPy array using np.array().
 
 ### Step 3:
-Call the lu() function by passing the defined matrix as an argument.
-This function will return three matrices:
-
-P: Permutation matrix
-
-L: Lower triangular matrix
-
-U: Upper triangular matrix
+Take input for the right-hand side matrix or vector B using eval(input()) and convert it into a NumPy array using np.array().
 
 ### Step 4:
-Store the output of the lu() function into three variables: P, L, and U.
+Call the lu_factor(A) function:
+
+It returns two values:
+
+lu: Combined LU decomposition of matrix A
+
+piv: Pivot indices for partial pivoting
 
 ### Step 5:
-Display the matrices P, L, and U using the print() function.
+Use lu_solve((lu, piv), B) to solve the system of equations.
+AX=B using the LU decomposition.
 
 ### Step 6:
+Store the result in a variable (e.g., result), which contains the solution vector or matrix.
+### Step 7:
+Display the result using the print() function.
+### Step 8:
 End the program.
 
 ### Program:
